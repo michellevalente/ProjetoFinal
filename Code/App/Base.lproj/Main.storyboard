@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="osi-XR-SFZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RBLViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Oscar_1.jpg" id="XGr-Rz-CiK">
+                                <rect key="frame" x="0.0" y="-10" width="375" height="621"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.14117647058823529" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gDC-GF-6qw">
+                        <barButtonItem key="leftBarButtonItem" tag="3" title="Connect to Oscar               " style="plain" id="WY1-Ll-WZO">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="BLEShieldScan:" destination="vXZ-lx-hvc" id="n4H-TF-9fS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="_changeableImageView" destination="XGr-Rz-CiK" id="Str-1m-fvD"/>
+                        <segue destination="hSo-m2-ags" kind="push" identifier="MenuSegue" id="I9P-I1-LWZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603.5" y="-334.5"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="JyG-et-ifl">
+            <objects>
+                <viewController restorationIdentifier="Menu" storyboardIdentifier="Menu" id="hSo-m2-ags" customClass="MenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iTJ-dI-dtz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lCz-b2-tEu">
+                                <rect key="frame" x="72" y="243" width="230" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Drive" image="Botao-02.png"/>
+                                <connections>
+                                    <segue destination="NjF-4O-G57" kind="push" id="CZ8-Gr-GRs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DpC-gN-wNd">
+                                <rect key="frame" x="72" y="363" width="230" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Learn" image="Botao-03.png"/>
+                                <connections>
+                                    <segue destination="J9T-qq-P98" kind="push" id="JJS-oU-feB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dR9-sd-GoI">
+                                <rect key="frame" x="72" y="481" width="230" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <size key="titleShadowOffset" width="100" height="100"/>
+                                <state key="normal" backgroundImage="Botao-01.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8em-2d-wfh" kind="push" id="xfy-rk-rv9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="oscar.png" id="IVo-AF-b5M">
+                                <rect key="frame" x="82" y="91" width="211" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086628616935327807" green="0.13512982424367215" blue="0.17631504524886887" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="U2s-Me-YeQ">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" id="c7t-T6-9rP">
+                            <connections>
+                                <action selector="BLEShieldScan:" destination="vXZ-lx-hvc" id="K7R-Lv-f21"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVD-h7-Mm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295" y="118"/>
+        </scene>
+        <!--Play-->
+        <scene sceneID="1Wv-v2-asu">
+            <objects>
+                <viewController restorationIdentifier="PlayViewController" storyboardIdentifier="PlayViewController" id="8em-2d-wfh" customClass="PlayViewController" customModule="Oscar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F3z-hQ-cXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9eD-df-f7U">
+                                <rect key="frame" x="87" y="601" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" backgroundImage="send.png"/>
+                                <connections>
+                                    <action selector="SendCode:" destination="8em-2d-wfh" eventType="touchUpInside" id="ndR-X3-aWS"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="PAv-ej-d3u">
+                                <rect key="frame" x="0.0" y="260" width="376" height="269"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="mRE-Gg-BHY" kind="embed" identifier="TransitionToTableView" id="slz-B3-e7g"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Pnl-0q-p7j">
+                                <rect key="frame" x="85" y="161" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="new_move.png">
+                                    <color key="titleColor" red="0.086274509799999996" green="0.14117647059999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ulS-NO-mvz" kind="push" id="Lrd-CK-1G7"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="tvw-eU-f6W">
+                                <rect key="frame" x="0.0" y="233" width="375" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.12941176470588237" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="ACTIONS"/>
+                                    <segment title="SENSOR REACTION"/>
+                                </segments>
+                                <color key="tintColor" red="0.89803921568627454" green="0.58823529411764708" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ChangeTab:" destination="8em-2d-wfh" eventType="valueChanged" id="ub6-sY-wrb"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" id="xCW-VV-z36">
+                                <rect key="frame" x="-1" y="528" width="376" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="59O-2o-0f9">
+                                        <rect key="frame" x="88" y="-2" width="200" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="clean.png"/>
+                                        <connections>
+                                            <action selector="CleanCodeAction:" destination="8em-2d-wfh" eventType="touchUpInside" id="3c3-YB-3Q2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aP6-gI-bZG">
+                                <rect key="frame" x="302" y="601" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pare.png"/>
+                                <connections>
+                                    <action selector="StopOscarAction:" destination="8em-2d-wfh" eventType="touchUpInside" id="CpT-wQ-yLn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="oscar.png" id="qLF-CS-mPP">
+                                <rect key="frame" x="82" y="91" width="211" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.13333333333333333" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Play" id="M7Z-iA-T4S"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="CleanCodeButton" destination="59O-2o-0f9" id="mPC-pV-4sh"/>
+                        <outlet property="SendButton" destination="9eD-df-f7U" id="vt5-yW-xVF"/>
+                        <outlet property="TabButtons" destination="tvw-eU-f6W" id="Kjm-ku-ho6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4g-13-eHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677.5" y="117.5"/>
+        </scene>
+        <!--Learn View Controller-->
+        <scene sceneID="Rz7-I9-Tr5">
+            <objects>
+                <viewController restorationIdentifier="LearnController" storyboardIdentifier="LearnController" id="J9T-qq-P98" customClass="LearnViewController" customModule="Oscar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74B-Nr-Djs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SAMPLE ACTIONS FOR OSCAR" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="G3x-7y-JiI">
+                                <rect key="frame" x="12" y="185" width="351" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.6588235294117647" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sB4-Ym-1dw">
+                                <rect key="frame" x="96" y="295" width="182" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.59607843137254901" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="POLICE SAMPLE">
+                                    <color key="titleColor" red="1" green="0.97456028480000001" blue="0.92996720830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sample1Action:" destination="J9T-qq-P98" eventType="touchUpInside" id="GX5-ZQ-t6F"/>
+                                    <segue destination="Okz-l9-occ" kind="push" id="Im1-6m-xYJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="txf-m9-eaQ">
+                                <rect key="frame" x="96" y="476.5" width="182" height="35.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.59607843140000005" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="DRIVE SAMPLE">
+                                    <color key="titleColor" red="1" green="0.97456028480000001" blue="0.92996720830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sample3Action:" destination="J9T-qq-P98" eventType="touchUpInside" id="Rrd-8m-r6G"/>
+                                    <segue destination="Okz-l9-occ" kind="push" id="L1K-tw-Lhr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aAQ-JZ-OnD">
+                                <rect key="frame" x="96" y="390" width="182" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.59607843140000005" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="SENSOR SAMPLE">
+                                    <color key="titleColor" red="1" green="0.97456028480000001" blue="0.92996720830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sample2Action:" destination="J9T-qq-P98" eventType="touchUpInside" id="FJv-yD-a0o"/>
+                                    <segue destination="Okz-l9-occ" kind="push" id="PCs-vt-VNs"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="oscar.png" id="vUw-5T-HHF">
+                                <rect key="frame" x="82" y="91" width="211" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1154354606" green="0.1778338095" blue="0.24196596910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dom-z6-FE3"/>
+                    <connections>
+                        <outlet property="Sample1" destination="sB4-Ym-1dw" id="rmu-gq-AWg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEY-s3-lVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586.5" y="1048.5"/>
+        </scene>
+        <!--Driver View Controller-->
+        <scene sceneID="2M6-e1-ESW">
+            <objects>
+                <viewController id="NjF-4O-G57" customClass="DriverViewController" customModule="Oscar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Bc-Rv-rf1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rwg-JY-KAF">
+                                <rect key="frame" x="56" y="395" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="direita.png"/>
+                                <connections>
+                                    <action selector="RightButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="lLJ-j3-r40"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZEG-ny-OLu">
+                                <rect key="frame" x="258" y="242" width="80" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="led_vermelho.png"/>
+                                <connections>
+                                    <action selector="RedLedButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="jtO-0T-nCs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="djI-Jk-99P">
+                                <rect key="frame" x="102" y="242" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="honk.png"/>
+                                <connections>
+                                    <action selector="BuzzButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="OPA-Cu-rTZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gQg-JH-O1S">
+                                <rect key="frame" x="34" y="242" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pare.png"/>
+                                <connections>
+                                    <action selector="StopButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="vLa-dM-Ujp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sWt-6g-f4z">
+                                <rect key="frame" x="258" y="395" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="esquerda.png"/>
+                                <connections>
+                                    <action selector="LeftButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="G9c-mX-9aO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Z15-ms-M0R">
+                                <rect key="frame" x="156" y="335" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cima.png"/>
+                                <connections>
+                                    <action selector="ForwardButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="BYH-wa-JT4"/>
+                                </connections>
+                            </button>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Volante-13.png" id="RWt-tp-nLb">
+                                <rect key="frame" x="85" y="395" width="194" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="B8s-Me-mk2">
+                                <rect key="frame" x="170" y="242" width="80" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="led_azul.png"/>
+                                <connections>
+                                    <action selector="BlueLedButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="PdX-EM-DFA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="action.png" id="kqe-WK-5O6">
+                                <rect key="frame" x="36" y="179" width="300" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xMi-AB-T9Z">
+                                <rect key="frame" x="271" y="616" width="84" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.6588235294" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="HELP">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="JWv-kJ-MNH" kind="push" id="846-UK-Fm7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rya-Bp-525">
+                                <rect key="frame" x="156" y="595" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="baixo.png"/>
+                                <connections>
+                                    <action selector="BackwardButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="gP0-Je-GWh"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="oscar.png" id="vAq-Te-RAg">
+                                <rect key="frame" x="82" y="91" width="211" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11543546062742373" green="0.17783380949127037" blue="0.24196596907993961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.090196078430000007" green="0.13725490200000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gaG-94-bm6"/>
+                    <connections>
+                        <outlet property="BackwardButton" destination="Rya-Bp-525" id="saH-1L-Lo5"/>
+                        <outlet property="BlueLedButton" destination="B8s-Me-mk2" id="lYS-hS-sgu"/>
+                        <outlet property="BuzzButton" destination="djI-Jk-99P" id="3qp-js-L8U"/>
+                        <outlet property="ForwardButton" destination="Z15-ms-M0R" id="lsr-BE-xqP"/>
+                        <outlet property="LeftButton" destination="sWt-6g-f4z" id="1yn-dl-ghT"/>
+                        <outlet property="RedLedButton" destination="ZEG-ny-OLu" id="I9i-Nq-iIU"/>
+                        <outlet property="RightButton" destination="Rwg-JY-KAF" id="geq-iL-d1K"/>
+                        <outlet property="StopButton" destination="gQg-JH-O1S" id="VpI-52-RZk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3c-CC-c7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294.5" y="1133.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="PgQ-Mu-hTc">
+            <objects>
+                <tableViewController id="mRE-Gg-BHY" customClass="TableViewController" customModule="Oscar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="32" id="HFz-6y-psw">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="269"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="her-Kb-83c">
+                                <rect key="frame" x="0.0" y="28" width="376" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="her-Kb-83c" id="1UB-Yc-Jqw">
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Cpg-y7-pw9">
+                                            <rect key="frame" x="158" y="5" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="mRE-Gg-BHY" id="wqs-1J-Jax"/>
+                            <outlet property="delegate" destination="mRE-Gg-BHY" id="fWo-yy-3IN"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="HFz-6y-psw" id="3dU-R7-qtD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eB-Qu-8u8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="1847.5"/>
+        </scene>
+        <!--Choose an action for Oscar-->
+        <scene sceneID="a4E-tU-fAF">
+            <objects>
+                <viewController restorationIdentifier="CommandViewController" storyboardIdentifier="CommandViewController" id="ulS-NO-mvz" customClass="CommandViewController" customModule="Oscar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A5u-8G-2M4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4QH-M9-Q8x">
+                                <rect key="frame" x="-54" y="-75" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="red_light.jpg"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GlV-re-72j">
+                                <rect key="frame" x="264" y="352" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="esquerda.png"/>
+                                <connections>
+                                    <action selector="LeftButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="WbA-wG-mKa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RFZ-dR-WJH">
+                                <rect key="frame" x="161" y="559" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="baixo.png"/>
+                                <connections>
+                                    <action selector="BackwardButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="Nk1-PF-rph"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ePZ-M9-JXT">
+                                <rect key="frame" x="52" y="352" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="direita.png"/>
+                                <connections>
+                                    <action selector="RightButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="TSo-ti-ZBP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="action.png" id="reT-Pb-AnT">
+                                <rect key="frame" x="38" y="152" width="300" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Volante-13.png" id="j22-rN-9fQ">
+                                <rect key="frame" x="90" y="359" width="194" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pyN-h9-MGd">
+                                <rect key="frame" x="161" y="299" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cima.png"/>
+                                <connections>
+                                    <action selector="ForwardButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="Zgm-5s-qnG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hMU-LD-5rc">
+                                <rect key="frame" x="20" y="209" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pare.png"/>
+                                <connections>
+                                    <action selector="StopButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="Ktn-cL-eZb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xvK-i6-lTr">
+                                <rect key="frame" x="88" y="209" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="honk.png"/>
+                                <connections>
+                                    <action selector="BuzzButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="LRF-UK-EFN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2gn-VL-RTe">
+                                <rect key="frame" x="147" y="209" width="80" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="led_azul.png"/>
+                                <connections>
+                                    <action selector="BlueLedButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="l4X-eU-vGB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="07X-MB-egf">
+                                <rect key="frame" x="305" y="209" width="50" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="relogio.png"/>
+                                <connections>
+                                    <action selector="WaitButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="rjb-d6-vco"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KuP-sS-6ph">
+                                <rect key="frame" x="226" y="209" width="80" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="led_vermelho.png"/>
+                                <connections>
+                                    <action selector="RedLedButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="fFN-fs-gD3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XHj-tE-cEn">
+                                <rect key="frame" x="271" y="616" width="84" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.6588235294" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="HELP">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="JWv-kJ-MNH" kind="push" id="BdD-wl-8rK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Ub-2X-B4j">
+                                <rect key="frame" x="20" y="601" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="loop.png"/>
+                                <connections>
+                                    <action selector="LoopButtonAction:" destination="ulS-NO-mvz" eventType="touchUpInside" id="Edb-fV-ROn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="oscar.png" id="k1z-Z9-rmG">
+                                <rect key="frame" x="82" y="91" width="211" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.13333333333333333" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose an action for Oscar" id="VBd-iz-lKX"/>
+                    <connections>
+                        <outlet property="BackwardButton" destination="RFZ-dR-WJH" id="avU-cn-Hwt"/>
+                        <outlet property="BlueLedButton" destination="2gn-VL-RTe" id="xV5-bw-K9w"/>
+                        <outlet property="BuzzButton" destination="xvK-i6-lTr" id="5iD-z5-X9d"/>
+                        <outlet property="ForwardButton" destination="pyN-h9-MGd" id="Ln0-Sn-oQ8"/>
+                        <outlet property="LeftButton" destination="GlV-re-72j" id="sfQ-bs-E9l"/>
+                        <outlet property="LoopButton" destination="9Ub-2X-B4j" id="vSu-fx-iBe"/>
+                        <outlet property="RedLedButton" destination="KuP-sS-6ph" id="Lmg-nT-OEg"/>
+                        <outlet property="RightButton" destination="ePZ-M9-JXT" id="XYn-F2-BDB"/>
+                        <outlet property="StopButton" destination="hMU-LD-5rc" id="onz-JB-Blt"/>
+                        <outlet property="WaitButton" destination="07X-MB-egf" id="SXN-Zk-HV3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S1H-dL-HbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2110.5" y="103.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zZW-b1-1Ph">
+            <objects>
+                <viewController storyboardIdentifier="help" id="JWv-kJ-MNH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lMX-xI-VOm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="STOP MOVING" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="kQd-7K-NB4">
+                                <rect key="frame" x="106" y="98" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.58823529411764708" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HONK" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="bdb-bP-fpN">
+                                <rect key="frame" x="106" y="157" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.58823529409999997" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BLUE LIGHT ON OR OFF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="wkf-mI-TzJ">
+                                <rect key="frame" x="106" y="215" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.58823529409999997" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="RED LIGHT ON OR OFF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="2x1-EN-4cU">
+                                <rect key="frame" x="106" y="274" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.58823529409999997" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tIF-N0-LLh">
+                                <rect key="frame" x="26" y="147" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="honk.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZaC-aG-VrF">
+                                <rect key="frame" x="31" y="321" width="40" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="relogio.png"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WAIT SOME SECONDS BEFORE ACTION" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="Lye-b3-6gH">
+                                <rect key="frame" x="103" y="336" width="255" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.58823529409999997" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MOVE FORWARD" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="Vqr-Nf-7Bo">
+                                <rect key="frame" x="106" y="398" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.58823529409999997" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sH0-N9-aqE">
+                                <rect key="frame" x="30" y="387" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cima.png"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MOVE BACKWARD" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="koW-nR-PGN">
+                                <rect key="frame" x="106" y="457" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.58823529409999997" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TURN" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="Tbx-Mw-YH7">
+                                <rect key="frame" x="106" y="516" width="249" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.58823529409999997" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vj8-MB-fmZ">
+                                <rect key="frame" x="30" y="505" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="esquerda.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Y8Q-A0-Bmv">
+                                <rect key="frame" x="26" y="88" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pare.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IS4-19-HhO">
+                                <rect key="frame" x="16" y="259" width="70" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="led_vermelho.png"/>
+                                <connections>
+                                    <action selector="RedLedButtonAction:" destination="NjF-4O-G57" eventType="touchUpInside" id="yKi-RX-qLy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jVF-ze-sXb">
+                                <rect key="frame" x="30" y="446" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="baixo.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oq4-GV-e6Q">
+                                <rect key="frame" x="16" y="205" width="70" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="led_azul.png"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="ACTIONS AFTER THIS COMMAND WILL REPEAT AND STOP ONLY IF SENSOR REACTION OCCURS" textAlignment="center" id="HNE-4e-EJV">
+                                <rect key="frame" x="106" y="573" width="249" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.51372549019607838" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eVo-o1-ZbQ">
+                                <rect key="frame" x="31" y="579" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="loop.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11610930630000001" green="0.18516456140000001" blue="0.2415995004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SQP-vI-XAc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rf7-WD-Uok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2110.5" y="1133.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0nT-XD-hpA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="osi-XR-SFZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ow3-Ym-nb9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hSo-m2-ags" kind="relationship" relationship="rootViewController" id="tbO-tB-QrF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dca-iW-Bbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.5" y="103.5"/>
+        </scene>
+        <!--Sample View Controller-->
+        <scene sceneID="NEz-Dd-2Cp">
+            <objects>
+                <viewController storyboardIdentifier="SampleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Okz-l9-occ" customClass="SampleViewController" customModule="Oscar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jgJ-ne-p0e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HWy-l2-lfg">
+                                <rect key="frame" x="87" y="600" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" backgroundImage="send.png"/>
+                                <connections>
+                                    <action selector="SendCode:" destination="Okz-l9-occ" eventType="touchUpInside" id="cxI-xh-ZM1"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="mgK-YH-xEu">
+                                <rect key="frame" x="-10" y="262" width="431" height="278"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="mRE-Gg-BHY" kind="embed" id="kTF-Ih-kNA"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" id="euh-2i-c9r">
+                                <rect key="frame" x="0.0" y="539" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5x2-VR-jqh">
+                                        <rect key="frame" x="87" y="0.0" width="200" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="clean.png"/>
+                                        <connections>
+                                            <action selector="CleanCode:" destination="Okz-l9-occ" eventType="touchUpInside" id="hxI-Xw-6ET"/>
+                                            <action selector="CleanCodeAction:" destination="Okz-l9-occ" eventType="touchUpInside" id="uOX-Es-3Nm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="9WO-fc-clA">
+                                <rect key="frame" x="0.0" y="234" width="375" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.12941176469999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="ACTIONS"/>
+                                    <segment title="SENSOR REACTION"/>
+                                </segments>
+                                <color key="tintColor" red="0.8980392157" green="0.58823529409999997" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ChangeTab:" destination="Okz-l9-occ" eventType="valueChanged" id="afc-wU-WsN"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="oscar.png" id="gDw-l0-nAc">
+                                <rect key="frame" x="80" y="78" width="211" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11610930630000001" green="0.18516456140000001" blue="0.2415995004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bbi-96-rgw"/>
+                    <connections>
+                        <outlet property="CleanCodeButton" destination="5x2-VR-jqh" id="SdS-st-1UU"/>
+                        <outlet property="SendButton" destination="HWy-l2-lfg" id="XHf-tl-ndV"/>
+                        <outlet property="TabButtons" destination="9WO-fc-clA" id="AR9-fu-Uy3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cF-L0-lIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586.5" y="1803.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Botao-01.png" width="1386" height="398"/>
+        <image name="Botao-02.png" width="1386" height="398"/>
+        <image name="Botao-03.png" width="1386" height="398"/>
+        <image name="Oscar_1.jpg" width="640" height="1132"/>
+        <image name="Volante-13.png" width="1798" height="1798"/>
+        <image name="action.png" width="2610" height="398"/>
+        <image name="baixo.png" width="427" height="524"/>
+        <image name="cima.png" width="427" height="524"/>
+        <image name="clean.png" width="1725" height="398"/>
+        <image name="direita.png" width="467" height="467"/>
+        <image name="esquerda.png" width="467" height="467"/>
+        <image name="honk.png" width="412" height="404"/>
+        <image name="led_azul.png" width="489" height="383"/>
+        <image name="led_vermelho.png" width="489" height="383"/>
+        <image name="loop.png" width="48" height="48"/>
+        <image name="new_move.png" width="1725" height="398"/>
+        <image name="oscar.png" width="8072" height="4029"/>
+        <image name="pare.png" width="476" height="440"/>
+        <image name="red_light.jpg" width="562" height="585"/>
+        <image name="relogio.png" width="395" height="455"/>
+        <image name="send.png" width="1725" height="398"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="tbO-tB-QrF"/>
+        <segue reference="slz-B3-e7g"/>
+        <segue reference="846-UK-Fm7"/>
+        <segue reference="PCs-vt-VNs"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
